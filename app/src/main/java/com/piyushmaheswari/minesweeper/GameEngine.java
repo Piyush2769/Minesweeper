@@ -82,7 +82,7 @@ public class GameEngine {
         checkEnd();
     }
 
-    private boolean checkEnd(){
+    private void checkEnd(){
         int bombNotFound = BOMB_NUMBER;
         int notRevealed = WIDTH * HEIGHT;
         for ( int x = 0 ; x < WIDTH ; x++ ){
@@ -100,7 +100,6 @@ public class GameEngine {
         if( bombNotFound == 0 && notRevealed == 0 ){
             Toast.makeText(context,"Game won", Toast.LENGTH_SHORT).show();
         }
-        return false;
     }
 
     public void flag( int x , int y ){
